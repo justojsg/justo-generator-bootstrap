@@ -9,3 +9,14 @@ Generator for a Bootstrap application.
 ```
 npm install -g justo-generator-bootstrap
 ```
+
+## Parameters
+
+- `title`. The title page.
+- `fontAwesome`. Would you like to use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
+
+Example:
+
+```
+justo -g bootstrap title:'This the title' fontAwesome:'CDN (MAXCDN)'
+```
