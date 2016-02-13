@@ -15,6 +15,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       _get(Object.getPrototypeOf(_class.prototype), "init", this).call(this);} }, { key: "fin", value: function fin() 
 
@@ -61,4 +77,4 @@
 
 
 
-      this.mkdir("test/unit");} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;
+      this.mkdir("test/unit");} }, { key: "help", get: function get() {return { desc: "Generate a Bootstrap project.", params: { title: "The index.html <title>.", fontAwesome: "Use 'Font Awesome': 'false', nope; 'local', locally; or 'CDN (MAXCDN)'." }, commands: { add: "Create a Bootstrap file." } };} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;

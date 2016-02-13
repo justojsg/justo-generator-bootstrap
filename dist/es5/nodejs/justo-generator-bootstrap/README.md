@@ -12,12 +12,12 @@ npm install -g justo-generator-bootstrap
 
 ## Default generator
 
-Creates a *Bootstrap* project.
+Create a *Bootstrap* project.
 
 ### Parameters
 
 - `title`. The index.html &lt;title>.
-- `fontAwesome`. Would you like to use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
+- `fontAwesome`. Use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
 
 Example:
 
@@ -27,13 +27,13 @@ justo -g bootstrap title:'This the title' fontAwesome:'CDN (MAXCDN)'
 
 ## add generator
 
-Creates a *Bootstrap* file.
+Create a *Bootstrap* file.
 
 ### Parameters
 
 - `file`. The file.
 - `title`. The &lt;title>.
-- `fontAwesome`. Would you like to use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
+- `fontAwesome`. Use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
 
 Example:
 

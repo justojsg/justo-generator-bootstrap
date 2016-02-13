@@ -15,6 +15,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
       _get(Object.getPrototypeOf(_class.prototype), "init", this).call(this);} }, { key: "fin", value: function fin() 
 
@@ -54,4 +68,4 @@
 
         answers.fontAwesome == "CDN (MAXCDN)" ? 
         "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" : 
-        false });} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;
+        false });} }, { key: "help", get: function get() {return { desc: "Create a Bootstrap file.", params: { file: "The file.", title: "The <title>.", fontAwesome: "Use 'Font Awesome': 'false', nope; 'local', locally; or 'CDN (MAXCDN)'." } };} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;
