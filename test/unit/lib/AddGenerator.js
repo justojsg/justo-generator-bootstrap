@@ -3,14 +3,14 @@ const path = require("path");
 const Dir = require("justo-fs").Dir;
 const file = require("justo-assert-fs").file;
 const dir = require("justo-assert-fs").dir;
-const Generator = require("../../../dist/es5/nodejs/justo-generator-bootstrap").default;
+const Generator = require("../../../dist/es5/nodejs/justo-generator-bootstrap").add;
 const suite = require("justo").suite;
 const test = require("justo").test;
 const init = require("justo").init;
 const fin = require("justo").fin;
 
 //suite
-suite("Generator", function() {
+suite("Generetor", function() {
   suite("#constructor()", function() {
     test("constructor()", function() {
       var gen = new Generator({});
@@ -32,14 +32,9 @@ suite("Generator", function() {
     });
 
     test("generate(answers)", function() {
-      gen.generate({});
+      gen.generate({file: "page.html"});
 
-      file(DST.path, "app/index.html").must.exist();
-      dir(DST.path, "app/fonts").must.exist();
-      dir(DST.path, "app/images").must.exist();
-      dir(DST.path, "app/scripts").must.exist();
-      dir(DST.path, "app/styles").must.exist();
-      dir(DST.path, "test/unit").must.exist();
+      file(DST.path, "app/page.html").must.exist();
     });
   });
 })();
