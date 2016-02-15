@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="${scope.lang}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Bootstrap -->
+  <link href="${scope.bootstrapCss}" rel="stylesheet">
+  ${scope.fontAwesome ? '<link href="' + scope.fontAwesome + '" ref="stylesheet">' : ''}
+
+  <title>${scope.title}</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="navbar navbar-light navbar-static-top bd-navbar" role="banner">
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
+        &#9776;
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="/">
+        Brand
+      </a>
+    </div>
+
+    <div class="collapse navbar-toggleable-xs">
+      <nav class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="/">Your brand</a>
+        <a class="nav-item nav-link" href="">Menu 1</a>
+        <a class="nav-item nav-link" href="">Menu 2</a>
+      </nav>
+
+      <nav class="nav navbar-nav navbar-right">
+        <a href="">Menu 3</a>
+        <a href="">Menu 4</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main role="main">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Hello, World!</h1>
+        <p class="lead">This is the Jumbotron template.</p>
+        <hr class="m-y-2">
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="text-muted" role="contentinfo">
+    <div class="container">
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="${scope.jqueryJs}"></script>
+  <script src="${scope.bootstrapJs}"></script>
+</body>
+</html>

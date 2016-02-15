@@ -29,6 +29,8 @@
 
 
 
+
+
     {
       _get(Object.getPrototypeOf(_class.prototype), "init", this).call(this);} }, { key: "fin", value: function fin() 
 
@@ -56,10 +58,18 @@
 
 
     answers) {
-      this.template("app/index.html", answers.file, { 
+      var tmp;
+
+
+      if (answers.template == "jumbotron") tmp = "app/jumbotron.html";else 
+      if (answers.template == "jumbotron-fluid") tmp = "app/jumbotron-fluid.html";else 
+      tmp = "app/starter.html";
+
+
+      this.template(tmp, answers.file, { 
+        lang: answers.lang, 
         title: answers.title, 
         bootstrapCss: "styles/bootstrap.min.css", 
-        bootstrapThemeCss: "styles/bootstrap-theme.min.css", 
         bootstrapJs: "scripts/bootstrap.min.js", 
         jqueryJs: "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", 
         fontAwesome: 
@@ -68,4 +78,4 @@
 
         answers.fontAwesome == "CDN (MAXCDN)" ? 
         "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" : 
-        false });} }, { key: "help", get: function get() {return { desc: "Create a Bootstrap file.", params: { file: "The file.", title: "The <title>.", fontAwesome: "Use 'Font Awesome': 'false', nope; 'local', locally; or 'CDN (MAXCDN)'." } };} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;
+        false });} }, { key: "help", get: function get() {return { desc: "Create a Bootstrap file.", params: { lang: "The <html>'s lang attribute.", file: "The file.", title: "The <title>.", fontAwesome: "Use 'Font Awesome': 'false', nope; 'local', locally; or 'MaxCDN'.", template: "The file template to use: 'jumbotron', 'jumbotron-fluid'." } };} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;

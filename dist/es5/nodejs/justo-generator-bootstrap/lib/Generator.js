@@ -31,6 +31,8 @@
 
 
 
+
+
     {
       _get(Object.getPrototypeOf(_class.prototype), "init", this).call(this);} }, { key: "fin", value: function fin() 
 
@@ -49,7 +51,7 @@
       this.input({ name: "title", title: "Title" });
 
       if (this.confirm({ name: "fontAwesome", title: "Would you like to use 'Font Awesome'?" })) {
-        this.list({ name: "fontAwesome", title: "  How to link it?", choices: ["local", "CDN (MAXCDN)"] });}} }, { key: "generate", value: function generate(
+        this.list({ name: "fontAwesome", title: "  How to link it?", choices: ["local", "MaxCDN"] });}} }, { key: "generate", value: function generate(
 
 
 
@@ -57,24 +59,32 @@
 
 
     answers) {
+      var tmp;
+
+
+      if (answers.template == "jumbotron") tmp = "app/jumbotron.html";else 
+      if (answers.template == "jumbotron-fluid") tmp = "app/jumbotron-fluid.html";else 
+      tmp = "app/starter.html";
+
+
       this.mkdir("app/fonts");
       this.mkdir("app/images");
       this.mkdir("app/scripts");
       this.mkdir("app/styles");
-      this.template("app/index.html", { 
+      this.template(tmp, "index.html", { 
+        lang: answers.lang, 
         title: answers.title, 
         bootstrapCss: "styles/bootstrap.min.css", 
-        bootstrapThemeCss: "styles/bootstrap-theme.min.css", 
         bootstrapJs: "scripts/bootstrap.min.js", 
         jqueryJs: "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", 
         fontAwesome: 
         answers.fontAwesome == "local" ? 
         "fonts/font-awesome.min.css" : 
 
-        answers.fontAwesome == "CDN (MAXCDN)" ? 
+        answers.fontAwesome == "MaxCDN" ? 
         "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" : 
         false });
 
 
 
-      this.mkdir("test/unit");} }, { key: "help", get: function get() {return { desc: "Generate a Bootstrap project.", params: { title: "The index.html <title>.", fontAwesome: "Use 'Font Awesome': 'false', nope; 'local', locally; or 'CDN (MAXCDN)'." }, commands: { add: "Create a Bootstrap file." } };} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;
+      this.mkdir("test/unit");} }, { key: "help", get: function get() {return { desc: "Generate a Bootstrap project.", params: { lang: "The index.html language.", title: "The index.html <title>.", fontAwesome: "Use 'Font Awesome': 'false', nope; 'local', locally; or 'MaxCDN'.", template: "The file template to use: 'jumbotron', 'jumbotron-fluid'." }, commands: { add: "Create a Bootstrap file." } };} }]);return _class;}(_justoGenerator.Generator);exports.default = _class;

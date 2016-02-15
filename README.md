@@ -16,13 +16,16 @@ Create a *Bootstrap* project.
 
 ### Parameters
 
-- `title`. The index.html &lt;title>.
-- `fontAwesome`. Use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
+To list the parameters:
+
+```
+justo -g bootstrap help
+```
 
 Example:
 
 ```
-justo -g bootstrap title:'This the title' fontAwesome:'CDN (MAXCDN)'
+justo -g bootstrap title:'This the title' fontAwesome:MaxCDN
 ```
 
 ## add generator
@@ -31,12 +34,14 @@ Create a *Bootstrap* file.
 
 ### Parameters
 
-- `file`. The file.
-- `title`. The &lt;title>.
-- `fontAwesome`. Use *Font Awesome*? `false`, nope; `local`, yep, locally; or `CDN (MAXCDN)`.
+To list the parameters:
+
+```
+justo -g bootstrap help add
+```
 
 Example:
 
 ```
-justo -g bootstrap add file:index.html title:'This the title' fontAwesome:'CDN (MAXCDN)'
+justo -g bootstrap add file:index.html title:'This the title' fontAwesome:MaxCDN
 ```
